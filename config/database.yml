@@ -18,9 +18,11 @@ development:
   adapter: postgresql
   encoding: unicode
   database: smart_campus_development
+  host: localhost
   pool: 5
-  username: smart_campus
-  password:
+  username: talha
+  password: talha276
+
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +50,13 @@ test:
   encoding: unicode
   database: smart_campus_test
   pool: 5
-  username: smart_campus
-  password:
+  username: talha
+  password: talha276
 
 production:
   adapter: postgresql
   encoding: unicode
   database: smart_campus_production
   pool: 5
-  username: smart_campus
-  password:
+  username: talha
+  password: talha276
