@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-  	return render json: params.inspect
+  	# return render json: params.inspect
   	@message = Message.new(params[:message])
   	@message.save!
   end
