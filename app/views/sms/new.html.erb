@@ -1,0 +1,8 @@
+
+
+<%= form_for @sms, :url => sms_path(), :method => :post do |f| %>
+  From : <%= f.text_field :sms_from %><br />
+  
+  Body : <%= f.text_area :body %><br />
+  <%= f.submit %>
+<% end %>

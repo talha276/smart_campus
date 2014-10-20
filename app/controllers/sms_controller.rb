@@ -10,8 +10,12 @@ class SmsController < ApplicationController
   end
 
   def create
-  	s = SMS.new(params[:sms])
-  	s.save!
+  	@sms1 = SMS.new(params[:sms])
+  	@sms1.save!
+  end
+
+  def new
+  	@sms = Sms.new
   end
 
   def delete

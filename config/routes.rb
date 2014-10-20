@@ -1,12 +1,10 @@
 SmartCampus::Application.routes.draw do
-  get "sms/index"
-  get "sms/edit"
-  get "sms/show"
-  get "sms/delete"
 
-
-
+ 
   resources :sms
+
+  resources :messages
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,13 +37,13 @@ SmartCampus::Application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-root 'sms#index'
+root 'messages#index'
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
   #     resources :sales do
   #       get 'recent', on: :collection
-  #     end
+  #     end 
   #   end
 
   # Example resource route with concerns:
