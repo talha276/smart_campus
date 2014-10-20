@@ -21,4 +21,12 @@ class MessagesController < ApplicationController
 
   def delete
   end
+
+  def checkcreate
+  	# return render json: params.inspect
+  	@message = Message.new
+  	@message.sms_from = params['sms_from']
+  	@message.sms_body = params['sms_body']
+  	@message.save!
+  end
 end
