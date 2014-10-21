@@ -3,7 +3,19 @@
 <%if @messages.present? %>
 <h2>-----------------Retreived Data---------------------</h2>
 	<% @messages.each do |sms| %>
-	<p>From : <%= sms.sms_from %></p>
+	<% sms.sms_from = sms.sms_from.gsub("\"",'') %>
+	<% sms.sms_body = sms.sms_body.gsub("\"",'') %>
+	<% arr = sms.sms_from.split(' ')%>
+	<% len = arr.length %>
+	<p>Received on : <%= arr[0] %> </p>
+	<% i = 1 %>
+	<p>From : 
+	<% while i < len-2 %> 
+	<%= arr[i] %>
+	<% i = i +1 %>
+	<% end %>
+	</p>
+	<p>Date and Time : <%= arr[len-2]+" "+arr[len-1] %>
 	<p>Body : <%= sms.sms_body %></p>
 	<hr>
 	</br>
